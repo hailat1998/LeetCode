@@ -4,18 +4,18 @@ class Solution {
            return lostOf();
         val list = mutableListOf<Int>();
         for(i in graph){
-            if(graph[i].size == 0){
+            if(i.size == 0){
                list.add(i);
             }else{
                 var j = 0;
-                for(u in graph[i]){
-                    if(graph[u].size == 0){ 
+                for(u in i){
+                    if(u.size == 0){ 
                       j++;
                     }else{
                         break;
                     }
                     }
-                    if(j == graph[u].size){
+                    if(j == u.size){
                         list.add(i).distnict()
                 }
                 }
