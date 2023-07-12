@@ -21,7 +21,7 @@ class Solution {
                 }
              }
 
-          val list2 = list.distnict().sort();
+          val list2 = list.distnict().sorted();
           return list2;
     }
 }
