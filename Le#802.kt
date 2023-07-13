@@ -3,20 +3,24 @@ class Solution {
         if(graph.size > Math.pow(10,4))
            return lostOf();
         val list = mutableListOf<Int>();
+    var g=0;
         for(i in graph){
+        g++
             if(i.size == 0){
-               list.add(i);
+               list.add(g);
             }else{
                 var j = 0;
-                for(u in i){
-                    if(u.size == 0){ 
+		var h = 0;
+                while(h < i.size){
+                    if(graph[i[h]].size == 0){ 
                       j++;
                     }else{
                         break;
                     }
+			h++;
                     }
-                    if(j == u.size){
-                        list.add(i).distnict()
+                    if(j == i.size){
+                        list.add(g);
                 }
                 }
              }
