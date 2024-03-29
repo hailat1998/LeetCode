@@ -1,24 +1,10 @@
 class Solution {
-    fun countSubarrays(nums: IntArray, k: Int): Long {
-        val max = nums.maxOrNull() ?: 0
-        var count = 0
-        var ans = 0L
-        var l = 0
-        var r = 0
-
-        while (r < nums.size) {
-            if (nums[r] == max) {
-                count++
-            }
-            while (count >= k) {
-                if (nums[l] == max) {
-                    count--
-                }
-                l++
-                ans += nums.size - r
-            }
-            r++
+    fun isAcronym(words: List<String>, s: String): Boolean {
+        val chars = CharArray(words.size)
+        for (i in 0 until words.size) {
+            chars[i] = words[i][0]
         }
-        return ans
+        val acronym = chars.joinToString("")
+        return acronym.equals(s, ignoreCase = true)
     }
 }
